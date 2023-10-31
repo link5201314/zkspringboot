@@ -34,7 +34,39 @@ public class MainViewModel {
 		//NOOP just for the notify change
 	}
 
+	@Command
+	@NotifyChange("currentTime2")
+	public void updateTime2() {
+		//NOOP just for the notify change
+	}
+	
+	@Command
+	@NotifyChange("currentTime3")
+	public void updateTime3() {
+		//NOOP just for the notify change
+	}
+	
 	public Date getCurrentTime() {
+		return testService.getTime();
+	}
+	
+	public Date getCurrentTime2() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return testService.getTime();
+	}
+	
+	public Date getCurrentTime3() {
+		try {
+			Thread.sleep(6000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return testService.getTime();
 	}
 

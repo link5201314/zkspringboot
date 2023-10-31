@@ -4,8 +4,13 @@
 		Current Time (from Spring Service):
 
 		<hlayout valign="middle">
-			<label value="@load(vm.currentTime)"/>
-			<button iconSclass="z-icon-refresh" onClick="@command('updateTime')"/>
+			<label value="@load(vm.currentTime2)"/>
+			<button iconSclass="z-icon-refresh" onClick="@command('updateTime2')"/>
+		</hlayout>
+		
+		<hlayout valign="middle">
+			<label value="@load(vm.currentTime3)"/>
+			<button iconSclass="z-icon-refresh" onClick="@command('updateTime3')"/>
 		</hlayout>
 
 		<separator />

@@ -29,10 +29,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <zkspringboot.version>3.0.0-SNAPSHOT</zkspringboot.version>
+        <zkspringboot.version>3.0.0</zkspringboot.version>
         <springboot.version>3.0.0</springboot.version>
-        <zk.version>9.6.0-jakarta</zk.version>
+        <zk.version>9.6.4-jakarta-Eval</zk.version>
     </properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.opentelemetry</groupId>
+				<artifactId>opentelemetry-bom</artifactId>
+				<version>1.30.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -79,6 +91,11 @@
             <artifactId>zkplus</artifactId>
             <version>${zk.version}</version>
         </dependency>
+        
+		<dependency>
+			<groupId>io.opentelemetry</groupId>
+			<artifactId>opentelemetry-api</artifactId>
+		</dependency>
     </dependencies>
 
     <build>
